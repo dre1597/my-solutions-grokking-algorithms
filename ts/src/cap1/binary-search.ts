@@ -1,4 +1,4 @@
-export const binary_search = <T>(list: T[], elem: T): number | null => {
+export const binarySearch = <T>(list: T[], elem: T): number | null => {
   let start: number = 0;
   let end: number = list.length - 1;
 

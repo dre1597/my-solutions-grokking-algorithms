@@ -1,11 +1,11 @@
-import { binary_search } from './binary-search';
+import { binarySearch } from './binary-search';
 
 describe('Binary Search', () => {
   test('should return null if the list is empty', () => {
     const list = [];
     const elem = 1;
 
-    const result = binary_search(list, elem);
+    const result = binarySearch(list, elem);
     expect(result).toBe(null);
   });
 
@@ -13,7 +13,7 @@ describe('Binary Search', () => {
     const list = [1, 2, 3];
     const elem = 5;
 
-    const result = binary_search(list, elem);
+    const result = binarySearch(list, elem);
     expect(result).toBe(null);
   });
 
@@ -22,8 +22,8 @@ describe('Binary Search', () => {
     const elem1 = 1;
     const elem2 = 5;
 
-    const result1 = binary_search(list, elem1);
-    const result2 = binary_search(list, elem2);
+    const result1 = binarySearch(list, elem1);
+    const result2 = binarySearch(list, elem2);
 
     expect(result1).toBe(0);
     expect(result2).toBe(4);
