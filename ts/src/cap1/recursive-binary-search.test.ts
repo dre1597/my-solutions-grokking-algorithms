@@ -1,26 +1,30 @@
 import { recursiveBinarySearch } from './recursive-binary-search';
 
+const emptyList = [];
+const numbersList = [1, 2, 3, 4, 5];
+const charsList = ['a', 'b', 'c', 'd', 'e'];
+
 describe('Binary Search Recursive', () => {
   test('should return null if the list is empty', () => {
-    const result = recursiveBinarySearch([], 1);
+    const result = recursiveBinarySearch(emptyList, 1);
     expect(result).toBe(null);
   });
 
   test('should return null if the element is not on the list', () => {
-    const result1 = recursiveBinarySearch([1, 2, 3], 5);
-    const result2 = recursiveBinarySearch(['a', 'b', 'c'], 'd');
+    const result1 = recursiveBinarySearch(numbersList, 0);
+    const result2 = recursiveBinarySearch(charsList, 'z');
 
     expect(result1).toBe(null);
     expect(result2).toBe(null);
   });
 
   test('should return the index of the element if its on the list', () => {
-    const result1 = recursiveBinarySearch([1, 2, 3, 4, 5], 1);
-    const result2 = recursiveBinarySearch([1, 2, 3, 4, 5], 5);
-    const result3 = recursiveBinarySearch([1, 2, 3, 4, 5], 3);
-    const result4 = recursiveBinarySearch(['a', 'b', 'c', 'd', 'e'], 'a');
-    const result5 = recursiveBinarySearch(['a', 'b', 'c', 'd', 'e'], 'e');
-    const result6 = recursiveBinarySearch(['a', 'b', 'c', 'd', 'e'], 'c');
+    const result1 = recursiveBinarySearch(numbersList, 1);
+    const result2 = recursiveBinarySearch(numbersList, 5);
+    const result3 = recursiveBinarySearch(numbersList, 3);
+    const result4 = recursiveBinarySearch(charsList, 'a');
+    const result5 = recursiveBinarySearch(charsList, 'e');
+    const result6 = recursiveBinarySearch(charsList, 'c');
 
     expect(result1).toBe(0);
     expect(result2).toBe(4);
