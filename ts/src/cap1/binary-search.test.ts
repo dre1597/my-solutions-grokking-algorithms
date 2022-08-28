@@ -5,13 +5,15 @@ describe('Binary Search', () => {
     const list = [];
     const elem = 1;
 
-    binary_search(list, elem);
+    const result = binary_search(list, elem);
+    expect(result).toBe(null);
   });
 
   test('should return null if not found the element', () => {
     const list = [1, 2, 3];
     const elem = 1;
 
-    binary_search(list, elem);
+    const result = binary_search(list, elem);
+    expect(result).toBe(null);
   });
 });
