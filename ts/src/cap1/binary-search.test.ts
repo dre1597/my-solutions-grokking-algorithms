@@ -9,7 +9,7 @@ describe('Binary Search', () => {
     expect(result).toBe(null);
   });
 
-  test('should return null if not found the element', () => {
+  test('should return null if the element is not on the list', () => {
     const list = [1, 2, 3];
     const elem = 5;
 
