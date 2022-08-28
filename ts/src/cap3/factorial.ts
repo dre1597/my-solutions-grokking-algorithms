@@ -1,3 +1,9 @@
 export const calcFactorial = (x: number): number => {
-  return null;
+  if (x < 0) {
+    return null;
+  }
+
+  if (x === 0) {
+    return 1;
+  }
 };
