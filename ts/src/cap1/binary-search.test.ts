@@ -11,7 +11,7 @@ describe('Binary Search', () => {
 
   test('should return null if not found the element', () => {
     const list = [1, 2, 3];
-    const elem = 1;
+    const elem = 5;
 
     const result = binary_search(list, elem);
     expect(result).toBe(null);
