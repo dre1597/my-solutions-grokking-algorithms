@@ -12,4 +12,18 @@ describe('Factorial', () => {
 
     expect(factorial).toBe(1);
   });
+
+  test('should calculate factorial if x > 0', () => {
+    const factorial1 = calcFactorial(1);
+    expect(factorial1).toBe(1);
+
+    const factorial2 = calcFactorial(2);
+    expect(factorial2).toBe(2);
+
+    const factorial5 = calcFactorial(5);
+    expect(factorial5).toBe(120);
+
+    const factorial10 = calcFactorial(10);
+    expect(factorial10).toBe(3628800);
+  });
 });
