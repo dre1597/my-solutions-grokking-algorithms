@@ -6,4 +6,10 @@ describe('Factorial', () => {
 
     expect(factorial).toBeNull();
   });
+
+  test('should return 1 if x is 0', () => {
+    const factorial = calcFactorial(0);
+
+    expect(factorial).toBe(1);
+  });
 });
