@@ -1,3 +1,4 @@
+import { recursiveSum } from './recursive-sum';
 import { sum } from './sum';
 
 const emptyList = [];
@@ -25,6 +26,29 @@ describe('Sum', () => {
     expect(result2).toBe(-6);
 
     const result3 = sum(list3);
+    expect(result3).toBe(0);
+  });
+});
+
+describe('Recursive sum', () => {
+  test('should return null if its called with a empty list', () => {
+    const result = recursiveSum(emptyList);
+    expect(result).toBeNull();
+  });
+
+  test('should return the only element if its called with a list with just one element', () => {
+    const result = recursiveSum(oneElementList);
+    expect(result).toBe(1);
+  });
+
+  test('should return the sum of the elements of the list', () => {
+    const result1 = recursiveSum(list1);
+    expect(result1).toBe(6);
+
+    const result2 = recursiveSum(list2);
+    expect(result2).toBe(-6);
+
+    const result3 = recursiveSum(list3);
     expect(result3).toBe(0);
   });
 });
