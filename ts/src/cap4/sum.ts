@@ -3,7 +3,11 @@ export const sum = (list: number[]) => {
     return null;
   }
 
-  if (list.length === 1) {
-    return list[0];
+  let total = 0;
+
+  for (const elem of list) {
+    total += elem;
   }
+
+  return total;
 };
